@@ -1,0 +1,11 @@
+[package]
+name = "wasm-wasi-return-code-reproducer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+wasmtime = "24.0.0"
+wasmtime-wasi = "24.0.0"
+wat = "1.217.0"
