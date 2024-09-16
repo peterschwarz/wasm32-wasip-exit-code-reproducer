@@ -111,3 +111,16 @@ $ cargo rustc \
 where `$BIN_NAME` is one of `[exit-with-process, exit-with-exit-code]`.
 
 The tests can be run using the standard `cargo test`.
+
+## System Notes
+
+*rustc version*: `rustc 1.80.1 (3f5fd8dd4 2024-08-06)`
+*host OS*:
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.4 LTS
+Release:        22.04
+Codename:       jammy
+```
