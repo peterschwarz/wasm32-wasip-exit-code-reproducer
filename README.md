@@ -112,6 +112,21 @@ where `$BIN_NAME` is one of `[exit-with-process, exit-with-exit-code]`.
 
 The tests can be run using the standard `cargo test`.
 
+## Generated WASM
+
+Looking at the WASM and decompiling it to WAT, we can see that in the ExitCode
+case, the `main` (marked as `no_mangle`) function is returning a `i32.const 1`:
+
+```wat
+(func $main (type 0) (result i32)
+  (local i32)
+  global.get $__stack_pointer
+  ;; ...
+  global.set $__stack_pointer
+  i32.const 1)
+```
+
+
 ## System Notes
 
 *rustc version*: `rustc 1.80.1 (3f5fd8dd4 2024-08-06)`
