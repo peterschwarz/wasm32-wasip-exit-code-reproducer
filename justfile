@@ -23,7 +23,6 @@ _build-wasm-binary BIN_NAME:
         --release \
         --target {{WASM_TARGET}} \
         -- \
-        # -C lto=y \
         -C panic=abort \
         -C opt-level=z \
         -C codegen-units=1

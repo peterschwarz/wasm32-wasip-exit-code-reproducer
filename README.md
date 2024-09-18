@@ -127,7 +127,6 @@ $ cargo rustc \
         --release \
         --target wasm32-wasip1 \
         -- \
-        # -C lto=y \
         -C panic=abort \
         -C opt-level=z \
         -C codegen-units=1
