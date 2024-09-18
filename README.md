@@ -11,6 +11,11 @@ There are two simple examples, `exit-with-process`, which uses
 `std::process::ExitCode`.  Each example may be executed on its own, compiled for
 the host platform.
 
+When compiled as a standard binary on the host system, the exit codes are
+returned as expected.  When compiled with `wasm32-wasip1`, the use of `ExitCode`
+results in the exit code of `1`, regardless of the value provided to
+`ExitCode::from`.
+
 Note that the tool chain may be passed as an additional parameter to the `just`
 commands listed below.
 
