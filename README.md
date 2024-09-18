@@ -11,6 +11,31 @@ There are two simple examples, `exit-with-process`, which uses
 `std::process::ExitCode`.  Each example may be executed on its own, compiled for
 the host platform.
 
+## Building
+
+Build the two applications using either
+
+```
+$ just build-all-binary
+```
+
+or directly with
+
+```
+$ cargo rustc \
+    --manifest-path $BIN_NAME/Cargo.toml \
+    --release \
+    -- \
+    -C panic=abort \
+    -C opt-level=z \
+    -C codegen-units=1
+```
+
+where `$BIN_NAME` is one of `[exit-with-process, exit-with-exit-code]`.
+
+These `rustc` configuration options match what is being used when compiling the
+code to `wasm32-wasi`.
+
 ## `exit-with-process`
 
 This example produces the exit code of `10`.  On the host system, we see the
