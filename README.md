@@ -11,6 +11,9 @@ There are two simple examples, `exit-with-process`, which uses
 `std::process::ExitCode`.  Each example may be executed on its own, compiled for
 the host platform.
 
+Note that the tool chain may be passed as an additional parameter to the `just`
+commands listed below.
+
 ## Building
 
 Build the two applications using either
@@ -153,7 +156,9 @@ case, the `main` (marked as `no_mangle`) function is returning a `i32.const 1`:
 
 ## System Notes
 
-*rustc version*: `rustc 1.80.1 (3f5fd8dd4 2024-08-06)`
+*rustc versions*: `rustc 1.80.1 (3f5fd8dd4 2024-08-06)`, `rustc 1.81.0
+(eeb90cda1 2024-09-04)`, `rustc 1.82.0-beta.3 (4976ae480 2024-09-09)`, and
+`rustc 1.83.0-nightly (28e8f01c2 2024-09-17)`
 *host OS*:
 ```
 $ lsb_release -a
