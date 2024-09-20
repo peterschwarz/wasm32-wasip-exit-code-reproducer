@@ -1,5 +1,10 @@
 # `wasm32-wasip1` Exit Code Reproducer
 
+*FIXED* This has been fixed in
+[130554](https://github.com/rust-lang/rust/pull/130554) and is scheduled to be
+included in the Rust 1.83 release (it is currently available in the Rust
+1.83-nightly build).
+
 This repository contains tests and code to reproduce an issue with WASM/WASI
 (preview 1) artifacts producing unexpected exit code values when using the Rust
 Standary Library's
